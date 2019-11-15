@@ -1,0 +1,11 @@
+#!/bin/bash
+
+## Description: Renders command reference documentation from source code
+## Usage: rendercmdref
+## Example: ddev rendercmdref
+
+# Ensure new commands are found
+composer dump-autoload
+
+## Render the command reference
+./typo3cms commandreference:render

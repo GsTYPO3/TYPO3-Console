@@ -35,7 +35,7 @@ with a database user that is allowed to create databases. By default user `root`
 The name of the created database is `travis_console_test`. You can change the username,
  password and database name by setting the following environment variables accordingly
  prior to executing the phpunit command, on bash, e.g. like this:
- 
+
 ```bash
 export TYPO3_INSTALL_DB_USER=root
 export TYPO3_INSTALL_DB_PASSWORD=root
@@ -44,10 +44,26 @@ export TYPO3_INSTALL_DB_DBNAME=my_console_test_db
 
 Before you submit a pull request with a new or changed command,
 make sure you run `./typo3cms commandreference:render` beforehand
-and include the changes in the PR
+and include the changes in the PR.
 
-Contributing policy
--------------------
+### Using DDEV Local
+
+The TYPO3 Console source comes with a DDEV Local configuration which makes the
+whole contribution process simpler as you do not have to setup a local
+environment matching the requirements of the TYPO3 Console.
+
+After downloading the source you just can run `ddev start` to start the Docker
+containers used for the local development. A TYPO3 instance will be setup
+automatically during the start and you can start ussing the TYPO3 Console with
+`ddev typo3cms`.
+
+Also the process of rendering the command reference is simplified by running
+`ddev rendercmdref`.
+
+After your work is done run `ddev stop` to stop the containers or `ddev delete`
+to also remove the database data.
+
+## Contributing policy
 
 Fork the project, create a feature branch, and send us a pull request.
 

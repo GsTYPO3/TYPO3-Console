@@ -1,4 +1,5 @@
 /.Build/*
+/.ddev/docker-compose.tempfs.yaml
 /Classes/Console/Hook/*
 /Configuration/ComposerPackagesCommands.php
 /Libraries/vendor

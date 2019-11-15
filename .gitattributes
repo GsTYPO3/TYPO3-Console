@@ -3,6 +3,7 @@
 /Resources/Private/ExtensionArtifacts/ export-ignore
 /Resources/Private/deploy_rsa.enc export-ignore
 /Tests/ export-ignore
+/.ddev/ export-ignore
 /.gitattributes export-ignore
 /.github/ export-ignore
 /.gitignore export-ignore
@@ -14,6 +15,7 @@
 /sonar-project.properties export-ignore
 
 # Enforce checkout with linux lf consistent over all plattforms
+.ddev/commands/*/* text eol=lf
 *.cfg text eol=lf
 *.dist text eol=lf
 *.json text eol=lf

@@ -1,0 +1,11 @@
+version: '3.6'
+
+# Not using NFS on Windows can make troubles which can be avoided by renaming this
+# file to docker-compose.tempfs.yaml
+services:
+  web:
+    volumes:
+      - type: tmpfs
+        target: /var/www/html/.Build/var/cache
+        tmpfs:
+          size: 268435456
